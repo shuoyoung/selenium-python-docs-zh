@@ -80,7 +80,7 @@ expected_conditions 模块提供了一组预定义的条件供WebDriverWait使�
 ~~~~~~~~~~~~~~
 
 如果某些元素不是立即可用的，隐式等待是告诉WebDriver去等待一定的时间后去查找元素。
-默认等待时间是0秒，一旦设置该值，隐式等待是设置该WebDriver的实例的生命周期。
+默认等待时间是0秒，一旦设置该值，隐式等待在该WebDriver实例的整个生命周期有效。
 
 ::
 
@@ -89,4 +89,4 @@ expected_conditions 模块提供了一组预定义的条件供WebDriverWait使�
   driver = webdriver.Firefox()
   driver.implicitly_wait(10) # seconds
   driver.get("http://somedomain/url_that_delays_loading")
-  myDynamicElement = driver.find_element_by_id("myDynamicElement")
+  myDynamicElement = driver.find_element_by_id("myDynamicElement") # affect this action
